@@ -1,30 +1,44 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #fceef0;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 .bubble-container {
-    position: relative;
-    height: 40vh;
-    background-color: #fceef0;
-    overflow: hidden;
-  }
-  
-  .bubble {
-    position: absolute;
-    background: rgba(0, 128, 0, 0.6);
-    border-radius: 50%;
-    opacity: 0.6;
-  }
-  
-  /* Example sizes (you can adjust these or add more bubbles in HTML) */
-  .bubble:nth-child(1) { width: 80px; height: 80px; }
-  .bubble:nth-child(2) { width: 60px; height: 60px; }
-  .bubble:nth-child(3) { width: 100px; height: 100px; }
-  .bubble:nth-child(4) { width: 70px; height: 70px; }
-  .bubble:nth-child(5) { width: 90px; height: 90px; }  
-  
+  position: relative;
+  height: 40vh;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  background: rgba(98, 142, 117, 0.4);
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.bubble:nth-child(1) {
+  width: 80px;
+  height: 80px;
+}
+.bubble:nth-child(2) {
+  width: 60px;
+  height: 60px;
+}
+.bubble:nth-child(3) {
+  width: 100px;
+  height: 100px;
+}
+.bubble:nth-child(4) {
+  width: 70px;
+  height: 70px;
+}
+.bubble:nth-child(5) {
+  width: 90px;
+  height: 90px;
+}
 
 .hero-content {
   position: absolute;
@@ -40,7 +54,7 @@ body {
 }
 
 .hero-content h1 .gold {
-  color: gold;
+  color: #d4af37;
 }
 
 .hero-content p {
@@ -56,8 +70,8 @@ body {
   padding: 10px 20px;
   margin: 0 10px;
   font-size: 1rem;
-  background-color: #8aac75;
-  color: black;
+  background-color: #628e75;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -65,10 +79,9 @@ body {
 }
 
 .button-group button:hover {
-  background-color: #a6c791;
+  background-color: #9dbf9e;
 }
 
-/* Meet the Team */
 .team-section {
   text-align: center;
   padding: 50px 20px;
@@ -116,8 +129,8 @@ body {
 .card-body button {
   margin-top: 10px;
   padding: 8px 15px;
-  background-color: #d4a5ff;
-  color: white;
+  background-color: #d4af37;
+  color: black;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -125,5 +138,6 @@ body {
 }
 
 .card-body button:hover {
-  background-color: #b97aff;
+  background-color: #c29e2e;
 }
+
