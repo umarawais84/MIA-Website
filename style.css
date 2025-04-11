@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fceef0;
+}
+
+.bubble-container {
+    position: relative;
+    height: 40vh;
+    background-color: #fceef0;
+    overflow: hidden;
+  }
+  
+  .bubble {
+    position: absolute;
+    background: rgba(0, 128, 0, 0.6);
+    border-radius: 50%;
+    opacity: 0.6;
+  }
+  
+  /* Example sizes (you can adjust these or add more bubbles in HTML) */
+  .bubble:nth-child(1) { width: 80px; height: 80px; }
+  .bubble:nth-child(2) { width: 60px; height: 60px; }
+  .bubble:nth-child(3) { width: 100px; height: 100px; }
+  .bubble:nth-child(4) { width: 70px; height: 70px; }
+  .bubble:nth-child(5) { width: 90px; height: 90px; }  
+  
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+}
+
+.hero-content h1 .gold {
+  color: gold;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.button-group {
+  margin-top: 15px;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1rem;
+  background-color: #8aac75;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-group button:hover {
+  background-color: #a6c791;
+}
+
+/* Meet the Team */
+.team-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.team-section h2 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 250px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body h3 {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+}
+
+.card-body p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.card-body button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #d4a5ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.card-body button:hover {
+  background-color: #b97aff;
+}
