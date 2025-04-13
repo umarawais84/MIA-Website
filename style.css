@@ -1,14 +1,21 @@
-html{
+html {
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     color: #333;
 }
 
+/*
+Main Color Schemes
+Gold - #d4af37
+Blue - #003366
+Green - #628e75
+*/
+  
 .bubble-container {
     position: relative;
     height: 40vh;
@@ -78,6 +85,14 @@ body {
 
 .button-group {
     margin-top: 15px;
+}
+
+.b-h:hover{
+    color: #003366;
+}
+
+.b-c:hover{
+    color: #003366;
 }
 
 .button-group button {
@@ -158,5 +173,13 @@ body {
 }
 
 
+.footer-a {
+    text-decoration: none;
+    color: #f0f0f0;
+    transition: color 0.3;
+}
 
+.footer-a:hover {
+    color: #d4af37;
+}
 
