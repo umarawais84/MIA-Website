@@ -5,155 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Marlboro Investment Academy</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-
-    .bubble-container {
-      position: relative;
-      height: 40vh;
-      background: linear-gradient(135deg, #003366, #d4af37); /* Navy Blue to Gold Gradient */
-      overflow: hidden;
-    }
-
-    .bubble {
-      position: absolute;
-      background: rgba(98, 142, 117, 0.4);
-      border-radius: 50%;
-      opacity: 0.6;
-    }
-
-    .bubble:nth-child(1) {
-      width: 80px;
-      height: 80px;
-    }
-
-    .bubble:nth-child(2) {
-      width: 60px;
-      height: 60px;
-    }
-
-    .bubble:nth-child(3) {
-      width: 100px;
-      height: 100px;
-    }
-
-    .bubble:nth-child(4) {
-      width: 70px;
-      height: 70px;
-    }
-
-    .bubble:nth-child(5) {
-      width: 90px;
-      height: 90px;
-    }
-
-    .hero-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      z-index: 1;
-      color: white; /* Ensure text is visible on dark background */
-    }
-
-    .hero-content h1 {
-      font-size: 3rem; /* Larger heading for emphasis */
-    }
-
-    .hero-content h1 .gold {
-      color: #d4af37; /* Gold accent color */
-    }
-
-    .hero-content p {
-      font-size: 1.2rem; /* Slightly larger text */
-      margin: 10px 0;
-    }
-
-    .button-group {
-      margin-top: 15px;
-    }
-
-    .button-group button {
-      padding: 10px 20px;
-      margin: 0 10px;
-      font-size: 1rem;
-      background-color: #628e75; /* Green button color */
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .button-group button:hover {
-      background-color: #9dbf9e;
-    }
-
-    .team-section {
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    .team-section h2 {
-      font-size: 3rem;
-      margin-bottom: 40px;
-    }
-
-    .card-container {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    .card {
-      width: 250px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-    }
-
-    .card img {
-      width: 100%;
-      height: auto;
-    }
-
-    .card-body {
-      padding: 20px;
-    }
-
-    .card-body h3 {
-      font-size: 1.2rem;
-      margin: 0 0 10px;
-    }
-
-    .card-body p {
-      font-size: 0.95rem;
-      color: #333;
-    }
-
-    .card-body button {
-      margin-top: 10px;
-      padding: 8px 15px;
-      background-color: #d4af37; /* Gold button */
-      color: black;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 0.9rem;
-    }
-
-    .card-body button:hover {
-      background-color: #c29e2e;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -178,57 +30,44 @@
     <h2>Meet the Team</h2>
     <div class="card-container">
       <div class="card">
-        <img src="https://via.placeholder.com/250x150" alt="Team Member" />
+        <img src="imgs/blc - 2.jpg" alt="President" />
         <div class="card-body">
           <h3>Umar Awais</h3>
           <p>Quick example text about a team member and what they do in the club.</p>
+          <a href="#footer">
           <button>Contact</button>
+          </a>
         </div>
       </div>
       <div class="card">
-        <img src="https://via.placeholder.com/250x150" alt="Team Member" />
+        <img src="imgs/blc - 1.avif" alt="President" />
         <div class="card-body">
           <h3>Jack Falcone</h3>
           <p>Quick example text about a team member and what they do in the club.</p>
+          <a href="#footer">
           <button>Contact</button>
+          </a>
         </div>
       </div>
     </div>
   </div>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const bubbles = document.querySelectorAll(".bubble");
-      const container = document.querySelector(".bubble-container");
 
-      const bubbleData = Array.from(bubbles).map((bubble) => {
-        return {
-          el: bubble,
-          x: Math.random() * (container.clientWidth - bubble.offsetWidth),
-          y: Math.random() * (container.clientHeight - bubble.offsetHeight),
-          dx: (Math.random() - 0.5) * 2,
-          dy: (Math.random() - 0.5) * 2,
-        };
-      });
+  <h1 class="sec-2" style="display: flex; justify-content: center; align-items: center; height: 50vh;">About MIA</h1>
 
-      function animate() {
-        bubbleData.forEach((b) => {
-          b.x += b.dx;
-          b.y += b.dy;
 
-          if (b.x <= 0 || b.x + b.el.offsetWidth >= container.clientWidth) b.dx *= -1;
-          if (b.y <= 0 || b.y + b.el.offsetHeight >= container.clientHeight) b.dy *= -1;
 
-          b.el.style.left = b.x + "px";
-          b.el.style.top = b.y + "px";
-        });
+  <footer id="footer" style="background-color: #003366; color: white; padding: 40px 20px 20px;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1000px; margin: 0 auto;">
+      <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+        <h3 style="color: #d4af37;">Marlboro Investment Academy</h3>
+        <p>Empowering students to build financial literacy, investing skills, and leadership for the future.</p>
+      </div>
+  </footer>
 
-        requestAnimationFrame(animate);
-      }
-
-      animate();
-    });
-
-  </script>
-</body>
+  <script src="script.js"></script>
+</body> 
 
 </html>
+
+
+
