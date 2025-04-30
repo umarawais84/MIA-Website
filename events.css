@@ -1,0 +1,193 @@
+/* Calendar/Events specific styles */
+.navbar {
+    display: flex;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.navbar a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.navbar a.active {
+    color: #003366;
+    border-bottom: 2px solid #d4af37;
+}
+
+.events-header {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.past-events {
+    background-color: #f0f0f0;
+    padding: 30px;
+    margin: 30px auto;
+    text-align: center;
+    max-width: 800px;
+}
+
+.timeline-container {
+    background-color: #f0f0f0;
+    padding: 30px 0;
+    margin: 30px auto;
+    max-width: 500px;
+    text-align: center;
+}
+
+.js-calendar {
+    max-width: 800px;
+    margin: 30px auto;
+    border: 1px solid #eaeaea;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.sign-up-form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.countdown-timer {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Card flip effects */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 15px;
+    display: inline-block;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-front {
+    background-color: #003366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card-back {
+    background-color: #d4af37;
+    color: black;
+    transform: rotateY(180deg);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Animations and hover effects */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s;
+}
+
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.scroll-animation.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Modal popup styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 768px) {
+    .flip-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .js-calendar {
+        padding: 10px;
+    }
+}
