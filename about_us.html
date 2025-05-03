@@ -2,40 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" /> <!-- Sets the character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Ensures mobile responsiveness -->
     <title>About Us - Marlboro Investment Academy</title>
+
+    <!-- External CSS stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="events.css">
     <link rel="stylesheet" href="about_us.css">
 </head>
 
 <body>
+    <!-- 🔹 Navigation bar -->
     <div class="navbar">
         <a href="index.html">Home</a>
-        <a href="about_us.html" class="active">About Us</a>
+        <a href="about_us.html" class="active">About Us</a> <!-- Current active page -->
         <a href="resources.html">Resources</a>
     </div>
 
+    <!-- 🔹 Hero section with floating bubbles and title -->
     <div class="bubble-container">
+        <!-- Repeating bubble divs for animation or decoration -->
         <div class="bubble"></div>
         <div class="bubble"></div>
         <div class="bubble"></div>
         <div class="bubble"></div>
         <div class="bubble"></div>
 
+        <!-- Main heading and tagline -->
         <div class="hero-content">
             <h1>Marlboro <span class="gold">Investment</span> Academy</h1>
             <p>Empowering the next generation of investors</p>
         </div>
     </div>
 
+    <!-- 🔹 Section header for events -->
     <div class="events-header">
         <h1>Past Events</h1>
     </div>
+
+    <!-- 🔹 Past event flip cards -->
     <div class="past-events">
         <div class="card-container">
-            <!-- Gallery/Carousel of past events -->
+            <!-- 🔸 Flip Card 1 -->
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
@@ -49,6 +58,7 @@
                 </div>
             </div>
 
+            <!-- 🔸 Flip Card 2 -->
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
@@ -62,6 +72,7 @@
                 </div>
             </div>
 
+            <!-- 🔸 Flip Card 3 -->
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
@@ -77,22 +88,26 @@
         </div>
     </div>
 
+    <!-- 🔹 Timeline Section -->
     <div class="timeline-container">
         <h2>Timeline</h2>
         <div id="timeline">
-            <!-- Timeline will be populated via JavaScript -->
+            <!-- Timeline item 1 -->
             <div class="timeline-item scroll-animation">
                 <h4>Club Founding</h4>
                 <p>September 2024</p>
             </div>
+            <!-- Timeline item 2 -->
             <div class="timeline-item scroll-animation">
                 <h4>First Investment Workshop</h4>
                 <p>October 2024</p>
             </div>
+            <!-- Timeline item 3 -->
             <div class="timeline-item scroll-animation">
                 <h4>Holiday Investment Challenge</h4>
                 <p>December 2024</p>
             </div>
+            <!-- Timeline item 4 -->
             <div class="timeline-item scroll-animation">
                 <h4>Spring Investment Symposium</h4>
                 <p>April 2025</p>
@@ -100,18 +115,21 @@
         </div>
     </div>
 
+    <!-- 🔹 Footer -->
     <footer id="footer" style="background-color: #003366; color: white; padding: 30px 20px; text-align: left;">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: 0 auto;">
-            <!-- First Column (Marlboro Investment Academy) -->
+            <!-- 🔸 Left side: about and quick links -->
             <div style="flex: 1; min-width: 250px; margin-bottom: 15px;">
                 <div class="left-side-f" style="margin-bottom: 10px;">
                     <h3
                         style="color: #d4af37; font-family: 'Arial', sans-serif; font-weight: bold; font-size: 20px; letter-spacing: 1px;">
                         Marlboro Investment Academy</h3>
-                    <p style="font-size: 14px; line-height: 1.5; font-family: 'Verdana', sans-serif;">Empowering
-                        students to build financial literacy, investing skills, and leadership for the future.</p>
+                    <p style="font-size: 14px; line-height: 1.5; font-family: 'Verdana', sans-serif;">
+                        Empowering students to build financial literacy, investing skills, and leadership for the
+                        future.
+                    </p>
                 </div>
-                <!-- Quick Links Section -->
+                <!-- Quick Links -->
                 <div class="quick-link">
                     <h4
                         style="color: #d4af37; font-family: 'Arial', sans-serif; font-weight: bold; font-size: 16px; margin-bottom: 10px;">
@@ -130,17 +148,19 @@
                 </div>
             </div>
 
-            <!-- Second Column (Contact Info) -->
+            <!-- 🔸 Right side: contact message -->
             <div style="flex: 1; min-width: 250px;">
                 <h4
                     style="color: #d4af37; font-family: 'Arial', sans-serif; font-weight: bold; font-size: 16px; margin-bottom: 10px;">
                     Contact Us</h4>
-                <p style="font-size: 14px; font-family: 'Verdana', sans-serif; line-height: 1.5;">Have questions or need
-                    more information? Reach out to us via email or follow us on social media for updates.</p>
+                <p style="font-size: 14px; font-family: 'Verdana', sans-serif; line-height: 1.5;">
+                    Have questions or need more information? Reach out to us via email or follow us on social media for
+                    updates.
+                </p>
             </div>
         </div>
 
-        <!-- Footer Bottom (Copyright/Additional Info) -->
+        <!-- 🔹 Footer bottom -->
         <div
             style="margin-top: 20px; text-align: center; font-size: 12px; color: #cccccc; font-family: 'Arial', sans-serif;">
             <p>&copy; 2025 Marlboro Investment Academy. All Rights Reserved.</p>
@@ -148,6 +168,7 @@
         </div>
     </footer>
 
+    <!-- 🔹 JavaScript files for interactivity and animations -->
     <script src="script.js"></script>
     <script src="about_us.js"></script>
 </body>

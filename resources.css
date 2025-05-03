@@ -1,212 +1,348 @@
-/* Resources page specific styles */
+/* Header styling for the resource section */
 .resource-header {
     background-color: #f0f0f0;
+    /* Light background for the header */
     padding: 50px 0;
+    /* Vertical padding */
     text-align: center;
+    /* Center-align text */
     margin-bottom: 30px;
+    /* Space below the header */
 }
 
+/* Container for the resources section */
 .resource-section {
     max-width: 1200px;
+    /* Max width for content */
     margin: 40px auto;
+    /* Center the section and add vertical margin */
     padding: 0 20px;
+    /* Horizontal padding */
     text-align: center;
+    /* Center-align text */
 }
 
+/* Layout for resource cards */
 .resource-grid {
     display: flex;
+    /* Flexbox layout */
     justify-content: center;
+    /* Center-align cards horizontally */
     flex-wrap: wrap;
+    /* Allow items to wrap */
     gap: 30px;
+    /* Space between cards */
     margin-top: 30px;
+    /* Space above grid */
 }
 
+/* Individual resource card styles */
 .resource-card {
     background-color: white;
+    /* White background for cards */
     border-radius: 8px;
+    /* Rounded corners */
     overflow: hidden;
+    /* Hide anything outside the card's bounds */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow effect */
     transition: transform 0.3s, box-shadow 0.3s;
+    /* Smooth transition for hover effects */
     width: 300px;
+    /* Fixed width for cards */
 }
 
+/* Hover effects for resource cards */
 .resource-card:hover {
     transform: translateY(-5px);
+    /* Lift the card slightly */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    /* Enhanced shadow */
 }
 
+/* Card image container styling */
 .resource-card-img {
     height: 160px;
+    /* Fixed height for images */
     display: flex;
+    /* Use flexbox */
     align-items: center;
+    /* Center-align image */
     justify-content: center;
+    /* Center-align image */
     color: white;
+    /* White text for content inside */
     font-size: 3rem;
+    /* Large font size for icons/text */
 }
 
+/* Content inside each resource card */
 .resource-card-content {
     padding: 20px;
+    /* Padding inside the content area */
 }
 
+/* Title inside each resource card */
 .resource-card h3 {
     margin-top: 0;
+    /* Remove margin at top */
     color: #003366;
+    /* Dark blue color */
 }
 
+/* Paragraph text styling inside resource card */
 .resource-card p {
     color: #666;
+    /* Medium gray for text */
     font-size: 0.9rem;
+    /* Smaller font size */
     line-height: 1.5;
+    /* Line height for readability */
 }
 
+/* Tag styling inside cards */
 .resource-tag {
     display: inline-block;
+    /* Inline block for tags */
     padding: 3px 8px;
+    /* Padding inside tags */
     color: white;
+    /* White text */
     font-size: 0.8rem;
+    /* Smaller font size */
     border-radius: 4px;
+    /* Rounded corners for tags */
     margin-right: 5px;
+    /* Space between tags */
     margin-bottom: 5px;
+    /* Space below tags */
 }
 
+/* Beginner tag style */
 .beginner {
     background-color: #628e75;
+    /* Green color for beginner */
 }
 
+/* Intermediate tag style */
 .intermediate {
     background-color: #d4af37;
+    /* Gold color for intermediate */
 }
 
+/* Advanced tag style */
 .advanced {
     background-color: #003366;
+    /* Dark blue color for advanced */
 }
 
+/* Article tag style */
 .article {
     background-color: #628e75;
+    /* Green for articles */
 }
 
+/* Video tag style */
 .video {
     background-color: #d4af37;
+    /* Gold for videos */
 }
 
+/* Course tag style */
 .course {
     background-color: #003366;
+    /* Dark blue for courses */
 }
 
+/* Link style for resources */
 .resource-link {
     display: inline-block;
+    /* Inline block layout */
     margin-top: 15px;
+    /* Space above the link */
     padding: 8px 15px;
+    /* Padding inside the link */
     background-color: #d4af37;
+    /* Gold background */
     color: black;
+    /* Black text */
     text-decoration: none;
+    /* No underline */
     border-radius: 5px;
+    /* Rounded corners */
     font-weight: bold;
+    /* Bold text */
     transition: background-color 0.3s;
+    /* Smooth transition for background */
 }
 
+/* Hover effect for resource links */
 .resource-link:hover {
     background-color: #c29e2e;
+    /* Darker gold background on hover */
 }
 
+/* Filter buttons container */
 .filter-buttons {
     display: flex;
+    /* Flexbox for filter buttons */
     justify-content: center;
+    /* Center-align buttons */
     flex-wrap: wrap;
+    /* Allow wrapping of buttons */
     gap: 10px;
+    /* Space between buttons */
     margin-bottom: 30px;
+    /* Space below the buttons */
 }
 
+/* Individual filter button style */
 .filter-button {
     padding: 8px 15px;
+    /* Padding inside buttons */
     border: none;
+    /* Remove border */
     border-radius: 25px;
+    /* Rounded button */
     cursor: pointer;
+    /* Pointer cursor */
     transition: background-color 0.3s;
+    /* Smooth transition for background */
     font-size: 0.9rem;
+    /* Font size */
     font-weight: 600;
+    /* Bold text */
 }
 
+/* Active filter button style */
 .filter-button.active {
     background-color: #d4af37;
+    /* Gold background */
     color: black;
+    /* Black text */
 }
 
+/* Inactive filter button style */
 .filter-button:not(.active) {
     background-color: #f0f0f0;
+    /* Light gray background */
     color: #555;
+    /* Medium gray text */
 }
 
+/* Hover effect for inactive filter buttons */
 .filter-button:hover:not(.active) {
     background-color: #e0e0e0;
+    /* Darker gray on hover */
 }
 
+/* Glossary section styling */
 .glossary-section {
     background-color: #f9f9f9;
+    /* Light background */
     padding: 40px 20px;
+    /* Vertical and horizontal padding */
     margin-top: 50px;
+    /* Space above the glossary */
 }
 
+/* Glossary container */
 .glossary-container {
     max-width: 800px;
+    /* Max width of glossary */
     margin: 0 auto;
+    /* Center-align glossary */
 }
 
+/* Individual glossary term styles */
 .glossary-term {
     border-bottom: 1px solid #eaeaea;
+    /* Light gray border between terms */
     padding: 15px 0;
+    /* Vertical padding */
 }
 
+/* Glossary term heading */
 .glossary-term h4 {
     margin: 0;
+    /* No margin */
     color: #003366;
+    /* Dark blue color */
     display: flex;
+    /* Flexbox layout for h4 */
     justify-content: space-between;
+    /* Space between title and toggler */
     cursor: pointer;
+    /* Pointer cursor on hover */
 }
 
+/* Plus symbol toggle in glossary terms */
 .glossary-term h4::after {
     content: "+";
+    /* Default plus symbol */
     font-size: 1.2rem;
+    /* Larger font size */
     transition: transform 0.3s;
+    /* Smooth transition for rotation */
 }
 
+/* Active glossary term with expanded definition */
 .glossary-term.active h4::after {
     content: "−";
+    /* Change to minus symbol */
     transform: rotate(180deg);
+    /* Rotate for effect */
 }
 
+/* Hidden glossary definitions */
 .glossary-definition {
     max-height: 0;
+    /* Hide content by default */
     overflow: hidden;
+    /* Hide overflow */
     transition: max-height 0.3s ease-out;
+    /* Smooth transition for opening */
 }
 
+/* Display glossary definition when term is active */
 .glossary-term.active .glossary-definition {
     max-height: 500px;
+    /* Set max height when active */
     transition: max-height 0.5s ease-in;
+    /* Smooth transition */
 }
 
+/* Tools section margin */
 .tools-section {
     margin-top: 50px;
+    /* Space above tools */
 }
 
+/* Tool card styling */
 .tool-card {
     border: 1px solid #eaeaea;
+    /* Light gray border */
     border-radius: 8px;
+    /* Rounded corners */
     padding: 20px;
+    /* Padding inside the card */
     margin-bottom: 20px;
+    /* Space below the card */
     background-color: white;
+    /* White background */
 }
 
-
+/* Responsive Design for smaller screens */
 @media (max-width: 768px) {
     .resource-grid {
         grid-template-columns: 1fr;
+        /* Single column layout */
     }
 
     .filter-buttons {
         flex-direction: column;
+        /* Stack buttons vertically */
         align-items: stretch;
+        /* Stretch buttons to full width */
     }
 }

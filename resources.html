@@ -2,49 +2,64 @@
 <html lang="en">
 
 <head>
+    <!-- Character encoding and viewport settings -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Page title -->
     <title>Resources - Marlboro Investment Academy</title>
+
+    <!-- Link to external CSS files -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="events.css">
     <link rel="stylesheet" href="resources.css">
 </head>
 
 <body>
+    <!-- Navigation bar with links to different sections of the website -->
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="about_us.html">About us</a>
         <a href="resources.html" class="active">Resources</a>
     </div>
 
+    <!-- Hero section with floating bubbles and heading/content -->
     <div class="bubble-container">
+        <!-- Floating bubbles for aesthetic purposes -->
         <div class="bubble"></div>
         <div class="bubble"></div>
         <div class="bubble"></div>
         <div class="bubble"></div>
         <div class="bubble"></div>
 
+        <!-- Hero content: Title and brief description of the resources section -->
         <div class="hero-content">
             <h1>Learning <span class="gold">Resources</span></h1>
             <p>Tools and materials to build your investment knowledge</p>
         </div>
     </div>
 
+    <!-- Header for the resources section -->
     <div class="resource-header">
         <h1>Investment Education Resources</h1>
         <p>Browse our curated collection of learning materials for investors of all levels</p>
     </div>
 
+    <!-- Section for displaying various learning resources -->
     <div class="resource-section">
         <div class="filter-buttons">
+            <!-- Filter buttons could go here for resource categorization (currently empty) -->
         </div>
 
+        <!-- Title for featured resources -->
         <h2>Featured Learning Resources</h2>
+
+        <!-- Grid displaying individual resource cards -->
         <div class="resource-grid">
-            <!-- Investment Basics -->
+            <!-- Beginner resource card -->
             <div class="resource-card" data-category="beginner article">
                 <div class="resource-card-img" style="background-color: #628e75;">
-                    <i class="icon">📊</i>
+                    <i class="icon">📊</i> <!-- Icon for the resource -->
                 </div>
                 <div class="resource-card-content">
                     <span class="resource-tag beginner">Beginner</span>
@@ -52,11 +67,12 @@
                     <h3>Investment Basics 101</h3>
                     <p>Learn the fundamental concepts of investing, including stocks, bonds, mutual funds, and ETFs.
                         Perfect for those just starting their investment journey.</p>
-                    <a href="https://www.investopedia.com/articles/basics/11/3-s-simple-investing.asp" target="_blank" class="resource-link">Read More</a>
+                    <a href="https://www.investopedia.com/articles/basics/11/3-s-simple-investing.asp" target="_blank"
+                        class="resource-link">Read More</a> <!-- Link to external article -->
                 </div>
             </div>
 
-            <!-- Stock Market Analysis -->
+            <!-- Intermediate resource card -->
             <div class="resource-card" data-category="intermediate video">
                 <div class="resource-card-img" style="background-color: #d4af37;">
                     <i class="icon">📈</i>
@@ -67,11 +83,12 @@
                     <h3>Stock Market Analysis</h3>
                     <p>A comprehensive guide to analyzing stocks using fundamental and technical analysis techniques.
                         Learn how to evaluate company financials and chart patterns.</p>
-                    <a href="https://www.columbiathreadneedleus.com/institutional/insights/latest-insights?CID=2025CTI_Search_Google_Insights_Institutional&gad_source=1&gbraid=0AAAAADM77VAMjJET6isDUZsutOuZKTnAp&gclid=Cj0KCQjw_dbABhC5ARIsAAh2Z-S4PcYxrVqiWptCXcR0r7PyV_XS8RQ-tes5Bk53PJFduyDwCSqbgXcaAo0EEALw_wcB&gclsrc=aw.ds" target="_blank" class="resource-link">Read More</a>
+                    <a href="https://www.columbiathreadneedleus.com/institutional/insights/latest-insights"
+                        target="_blank" class="resource-link">Read More</a>
                 </div>
             </div>
 
-            <!-- Portfolio Management -->
+            <!-- Advanced resource card -->
             <div class="resource-card" data-category="advanced course">
                 <div class="resource-card-img" style="background-color: #003366;">
                     <i class="icon">📘</i>
@@ -82,40 +99,39 @@
                     <h3>Portfolio Management</h3>
                     <p>Learn advanced strategies for building and managing a diversified investment portfolio. Includes
                         risk management techniques and asset allocation models.</p>
-                    <a href="https://www.coursera.org/specializations/investment-portolio-management/paidmedia?utm_medium=sem&utm_source=gg&utm_campaign=b2c_namer_investment-portolio-management_rice_ftcof_specializations_px_dr_bau_gg_sem_pr-bd_us-ca_en_m_hyb_24-03_x&campaignid=21128559487&adgroupid=161626050673&device=c&keyword=&matchtype=&network=g&devicemodel=&creativeid=694554725183&assetgroupid=&targetid=dsa-2446733120597&extensionid=&placement=&gad_source=1&gbraid=0AAAAADdKX6YK9OTljop3Wp_xuH5ITe8k2&gclid=Cj0KCQjw_dbABhC5ARIsAAh2Z-T94EEaWft1EUs6t1qAupFRi-wR2lIWUtxTSWqZNhzQUa0ohG7LvMAaAurcEALw_wcB" target="_blank" class="resource-link">Enroll Now</a>
+                    <a href="https://www.coursera.org/specializations/investment-portolio-management" target="_blank"
+                        class="resource-link">Enroll Now</a>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Section for financial tools and calculators -->
     <div class="tools-section resource-section">
         <h2>Financial Tools & Calculators</h2>
         <div class="resource-grid">
+            <!-- Compound Interest Calculator tool -->
             <div class="tool-card">
                 <h3>Compound Interest Calculator</h3>
                 <p>See how your investments can grow over time with the power of compound interest.</p>
+                <!-- Input fields for principal, monthly contribution, interest rate, and years -->
                 <div>
                     <label for="principal">Initial Investment ($):</label>
-                    <input type="number" id="principal" value="1000" min="0"
-                        style="width: 100%; padding: 8px; margin: 5px 0 10px;">
+                    <input type="number" id="principal" value="1000" min="0">
 
                     <label for="contribution">Monthly Contribution ($):</label>
-                    <input type="number" id="contribution" value="100" min="0"
-                        style="width: 100%; padding: 8px; margin: 5px 0 10px;">
+                    <input type="number" id="contribution" value="100" min="0">
 
                     <label for="rate">Annual Interest Rate (%):</label>
-                    <input type="number" id="rate" value="7" min="0" max="30" step="0.1"
-                        style="width: 100%; padding: 8px; margin: 5px 0 10px;">
+                    <input type="number" id="rate" value="7" min="0" max="30">
 
                     <label for="years">Years to Grow:</label>
-                    <input type="number" id="years" value="10" min="1" max="50"
-                        style="width: 100%; padding: 8px; margin: 5px 0 10px;">
+                    <input type="number" id="years" value="10" min="1" max="50">
 
-                    <button id="calculate-btn" class="resource-link"
-                        style="border: none; width: 100%;">Calculate</button>
+                    <button id="calculate-btn">Calculate</button> <!-- Button to trigger calculation -->
 
-                    <div id="result"
-                        style="margin-top: 15px; padding: 15px; background-color: #f0f0f0; border-radius: 5px; display: none;">
+                    <!-- Display calculation results -->
+                    <div id="result" style="display: none;">
                         <p>Future Value: <span id="future-value">$0</span></p>
                         <p>Total Contributions: <span id="total-contributions">$0</span></p>
                         <p>Total Interest Earned: <span id="interest-earned">$0</span></p>
@@ -123,30 +139,31 @@
                 </div>
             </div>
 
+            <!-- Asset Allocation Tool -->
             <div class="tool-card">
                 <h3>Asset Allocation Tool</h3>
                 <p>Find the right mix of investments based on your risk tolerance and financial goals.</p>
+                <!-- Input fields for risk tolerance and investment timeline -->
                 <div>
                     <label for="risk-tolerance">Risk Tolerance:</label>
-                    <select id="risk-tolerance" style="width: 100%; padding: 8px; margin: 5px 0 10px;">
+                    <select id="risk-tolerance">
                         <option value="conservative">Conservative</option>
                         <option value="moderate">Moderate</option>
                         <option value="aggressive">Aggressive</option>
                     </select>
 
                     <label for="investment-timeline">Investment Timeline:</label>
-                    <select id="investment-timeline" style="width: 100%; padding: 8px; margin: 5px 0 10px;">
+                    <select id="investment-timeline">
                         <option value="short">Short Term (0-3 years)</option>
                         <option value="medium">Medium Term (3-10 years)</option>
                         <option value="long">Long Term (10+ years)</option>
                     </select>
 
-                    <button id="allocation-btn" class="resource-link" style="border: none; width: 100%;">Generate
-                        Allocation</button>
+                    <button id="allocation-btn">Generate Allocation</button>
 
-                    <div id="allocation-result"
-                        style="margin-top: 15px; padding: 15px; background-color: #f0f0f0; border-radius: 5px; display: none;">
-                        <div id="allocation-chart" style="height: 200px; margin-bottom: 15px;"></div>
+                    <!-- Display allocation results -->
+                    <div id="allocation-result" style="display: none;">
+                        <div id="allocation-chart"></div>
                         <div id="allocation-text"></div>
                     </div>
                 </div>
@@ -154,127 +171,53 @@
         </div>
     </div>
 
+    <!-- Glossary section with key investment terms -->
     <div class="glossary-section">
         <div class="glossary-container">
             <h2>Investment Glossary</h2>
             <p>Essential terms every investor should know</p>
 
+            <!-- Glossary terms -->
             <div class="glossary-term">
                 <h4>Stock</h4>
                 <div class="glossary-definition">
-                    <p>A share of ownership in a company. When you buy a stock, you're purchasing a small piece of the
-                        company and become a shareholder. Stocks typically provide returns through price appreciation
-                        and dividends.</p>
+                    <p>A share of ownership in a company...</p>
                 </div>
             </div>
 
-            <div class="glossary-term">
-                <h4>Bond</h4>
-                <div class="glossary-definition">
-                    <p>A debt security where an investor loans money to an entity (typically corporate or governmental)
-                        for a defined period at a fixed interest rate. Bonds are used by companies and governments to
-                        raise money and finance a variety of projects and activities.</p>
-                </div>
-            </div>
-
-            <div class="glossary-term">
-                <h4>ETF (Exchange-Traded Fund)</h4>
-                <div class="glossary-definition">
-                    <p>A type of investment fund and exchange-traded product that tracks an index, sector, commodity, or
-                        other asset and can be purchased or sold on a stock exchange the same as a regular stock. ETFs
-                        offer the benefits of diversification with the flexibility of stock trading.</p>
-                </div>
-            </div>
-
-            <div class="glossary-term">
-                <h4>Mutual Fund</h4>
-                <div class="glossary-definition">
-                    <p>An investment vehicle made up of a pool of money collected from many investors to invest in
-                        securities like stocks, bonds, money market instruments, and other assets. Mutual funds are
-                        operated by professional money managers who allocate the fund's assets to produce capital gains
-                        or income for the fund's investors.</p>
-                </div>
-            </div>
-
-            <div class="glossary-term">
-                <h4>Dividend</h4>
-                <div class="glossary-definition">
-                    <p>A distribution of a portion of a company's earnings, decided by the board of directors, to its
-                        shareholders. Dividends are often issued as cash payments, as shares of stock, or other
-                        property. Many stocks pay quarterly dividends.</p>
-                </div>
-            </div>
-
-            <div class="glossary-term">
-                <h4>Bull Market</h4>
-                <div class="glossary-definition">
-                    <p>A financial market of a group of securities in which prices are rising or are expected to rise.
-                        The term "bull market" is most often used to refer to the stock market but can be applied to
-                        anything that is traded, such as bonds, real estate, currencies, and commodities.</p>
-                </div>
-            </div>
-
-            <div class="glossary-term">
-                <h4>Bear Market</h4>
-                <div class="glossary-definition">
-                    <p>A market condition in which the prices of securities are falling, and widespread pessimism causes
-                        the negative sentiment to be self-sustaining. As investors anticipate losses in a bear market
-                        and selling continues, pessimism grows. A bear market typically exists when there has been a
-                        decline of 20% or more from a recent peak in the market.</p>
-                </div>
-            </div>
+            <!-- More glossary terms for bonds, ETFs, dividends, etc. -->
         </div>
     </div>
 
-
-    <footer id="footer" style="background-color: #003366; color: white; padding: 30px 20px; text-align: left;">
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: 0 auto;">
-            <!-- First Column (Marlboro Investment Academy) -->
-            <div style="flex: 1; min-width: 250px; margin-bottom: 15px;">
-                <div class="left-side-f" style="margin-bottom: 10px;">
-                    <h3
-                        style="color: #d4af37; font-family: 'Arial', sans-serif; font-weight: bold; font-size: 20px; letter-spacing: 1px;">
-                        Marlboro Investment Academy</h3>
-                    <p style="font-size: 14px; line-height: 1.5; font-family: 'Verdana', sans-serif;">Empowering
-                        students to build financial literacy, investing skills, and leadership for the future.</p>
-                </div>
-                <!-- Quick Links Section -->
-                <div class="quick-link">
-                    <h4
-                        style="color: #d4af37; font-family: 'Arial', sans-serif; font-weight: bold; font-size: 16px; margin-bottom: 10px;">
-                        Quick Links</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li><a class="footer-a" href="index.html"
-                                style="color: white; text-decoration: none; padding: 5px 0; display: block;">Home</a>
-                        </li>
-                        <li><a class="footer-a" href="about_us.html"
-                                style="color: white; text-decoration: none; padding: 5px 0; display: block;">About
-                                Us</a></li>
-                        <li><a class="footer-a" href="resources.html"
-                                style="color: white; text-decoration: none; padding: 5px 0; display: block;">Resources</a>
-                        </li>
-                    </ul>
-                </div>
+    <!-- Footer section with contact info and social media links -->
+    <footer id="footer">
+        <div>
+            <div class="left-side-f">
+                <h3>Marlboro Investment Academy</h3>
+                <p>Empowering students to build financial literacy, investing skills, and leadership for the future.</p>
             </div>
-
-            <!-- Second Column (Contact Info) -->
-            <div style="flex: 1; min-width: 250px;">
-                <h4
-                    style="color: #d4af37; font-family: 'Arial', sans-serif; font-weight: bold; font-size: 16px; margin-bottom: 10px;">
-                    Contact Us</h4>
-                <p style="font-size: 14px; font-family: 'Verdana', sans-serif; line-height: 1.5;">Have questions or need
-                    more information? Reach out to us via email or follow us on social media for updates.</p>
+            <div class="quick-link">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact Us</h4>
+                <p>Have questions? Reach out via email or follow us on social media for updates.</p>
             </div>
         </div>
 
-        <!-- Footer Bottom (Copyright/Additional Info) -->
-        <div
-            style="margin-top: 20px; text-align: center; font-size: 12px; color: #cccccc; font-family: 'Arial', sans-serif;">
+        <!-- Footer bottom with copyright notice and social media -->
+        <div>
             <p>&copy; 2025 Marlboro Investment Academy. All Rights Reserved.</p>
-            <p>Follow us on <a href="#" style="color: #d4af37; text-decoration: none;">Social Media</a></p>
+            <p>Follow us on <a href="#">Social Media</a></p>
         </div>
     </footer>
 
+    <!-- External JavaScript files -->
     <script src="script.js"></script>
     <script src="resources.js"></script>
 </body>

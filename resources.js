@@ -1,17 +1,19 @@
-// JavaScript for the resources page
+// Wait for the document to be fully loaded before executing the script
 document.addEventListener('DOMContentLoaded', function () {
-    // Glossary accordion functionality
+
+    // Glossary term toggle functionality
     const glossaryTerms = document.querySelectorAll('.glossary-term');
 
     glossaryTerms.forEach(term => {
         const heading = term.querySelector('h4');
 
+        // Toggle the 'active' class on click to show/hide the glossary term
         heading.addEventListener('click', () => {
             term.classList.toggle('active');
         });
     });
 
-    // Filter buttons functionality
+    // Filter functionality for resource cards
     const filterButtons = document.querySelectorAll('.filter-button');
     const resourceCards = document.querySelectorAll('.resource-card');
 
@@ -19,18 +21,19 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', () => {
             const filter = button.getAttribute('data-filter');
 
-            // Remove active class from all buttons
+            // Remove 'active' class from all filter buttons
             filterButtons.forEach(btn => {
                 btn.classList.remove('active');
             });
 
-            // Add active class to clicked button
+            // Add 'active' class to the clicked filter button
             button.classList.add('active');
 
-            // Filter cards
+            // Filter resource cards based on the selected category
             resourceCards.forEach(card => {
                 const categories = card.getAttribute('data-category');
 
+                // Show or hide cards based on the filter
                 if (filter === 'all' || categories.includes(filter)) {
                     card.style.display = 'block';
                 } else {
@@ -40,11 +43,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Compound interest calculator
+    // Investment calculator functionality
     const calculateBtn = document.getElementById('calculate-btn');
 
     if (calculateBtn) {
         calculateBtn.addEventListener('click', function () {
+            // Get values from input fields
             const principal = parseFloat(document.getElementById('principal').value);
             const contribution = parseFloat(document.getElementById('contribution').value);
             const rate = parseFloat(document.getElementById('rate').value);
@@ -54,13 +58,16 @@ document.addEventListener('DOMContentLoaded', function () {
             let futureValue = principal;
             let totalContributions = principal;
 
+            // Calculate future value of the investment over the given years
             for (let i = 0; i < years * 12; i++) {
                 futureValue = futureValue * (1 + monthlyRate) + contribution;
                 totalContributions += contribution;
             }
 
+            // Calculate interest earned
             const interestEarned = futureValue - totalContributions;
 
+            // Display results on the page
             document.getElementById('future-value').textContent = '$' + futureValue.toFixed(2);
             document.getElementById('total-contributions').textContent = '$' + totalContributions.toFixed(2);
             document.getElementById('interest-earned').textContent = '$' + interestEarned.toFixed(2);
@@ -68,11 +75,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Asset allocation tool
+    // Asset allocation calculator functionality
     const allocationBtn = document.getElementById('allocation-btn');
 
     if (allocationBtn) {
         allocationBtn.addEventListener('click', function () {
+            // Get risk tolerance and investment timeline from the user input
             const riskTolerance = document.getElementById('risk-tolerance').value;
             const investmentTimeline = document.getElementById('investment-timeline').value;
 
@@ -80,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let bondPercentage = 0;
             let cashPercentage = 0;
 
-            // Very simple allocation model for demonstration purposes
+            // Set asset allocation based on risk tolerance
             if (riskTolerance === 'conservative') {
                 stockPercentage = 30;
                 bondPercentage = 50;
@@ -95,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 cashPercentage = 5;
             }
 
-            // Adjust for timeline
+            // Adjust allocation based on investment timeline
             if (investmentTimeline === 'short') {
                 stockPercentage -= 10;
                 bondPercentage -= 5;
@@ -106,12 +114,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 cashPercentage -= 5;
             }
 
-            // Ensure percentages are within bounds
+            // Ensure percentages stay within 0-100 range
             stockPercentage = Math.max(0, Math.min(100, stockPercentage));
             bondPercentage = Math.max(0, Math.min(100, bondPercentage));
             cashPercentage = Math.max(0, Math.min(100, cashPercentage));
 
-            // Make sure they sum to 100%
+            // Adjust allocation so the total always equals 100%
             const total = stockPercentage + bondPercentage + cashPercentage;
             if (total !== 100) {
                 const adjustment = (100 - total) / 3;
@@ -120,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 cashPercentage += adjustment;
             }
 
-            // Display results
+            // Display allocation chart
             document.getElementById('allocation-chart').innerHTML = `
           <div style="display: flex; height: 30px; width: 100%;">
             <div style="background-color: #003366; width: ${stockPercentage}%;"></div>
@@ -134,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         `;
 
+            // Display text breakdown of the allocation
             document.getElementById('allocation-text').innerHTML = `
           <p>Based on your ${riskTolerance} risk tolerance and ${investmentTimeline}-term investment timeline, we recommend the following allocation:</p>
           <ul>
@@ -144,6 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <p><em>Note: This is a simplified model for educational purposes. Individual financial situations may require different allocations.</em></p>
         `;
 
+            // Display the allocation result section
             document.getElementById('allocation-result').style.display = 'block';
         });
     }

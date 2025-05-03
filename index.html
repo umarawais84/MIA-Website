@@ -2,40 +2,46 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Marlboro Investment Academy</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="events.css">
+  <meta charset="UTF-8" /> <!-- Character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Responsive scaling on mobile -->
+  <title>Marlboro Investment Academy</title> <!-- Page title shown on browser tab -->
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css"> <!-- Base styles -->
+  <link rel="stylesheet" href="events.css"> <!-- Event-specific or extended styles -->
 </head>
 
 <body>
+  <!-- Navigation Bar -->
   <div class="navbar">
-    <a href="index.html" class="active">Home</a>
+    <a href="index.html" class="active">Home</a> <!-- Active page -->
     <a href="about_us.html">About Us</a>
     <a href="resources.html">Resources</a>
   </div>
 
+  <!-- Hero Section with animated bubbles and call-to-action buttons -->
   <div class="bubble-container">
-    <div class="bubble"></div>
+    <div class="bubble"></div> <!-- Decorative bubble elements -->
     <div class="bubble"></div>
     <div class="bubble"></div>
     <div class="bubble"></div>
     <div class="bubble"></div>
 
     <div class="hero-content">
-      <h1>Marlboro <span class="gold">Investment</span> Academy</h1>
-      <p>Empowering the next generation of investors</p>
-      <div class="button-group">
+      <h1>Marlboro <span class="gold">Investment</span> Academy</h1> <!-- Main title -->
+      <p>Empowering the next generation of investors</p> <!-- Subtitle -->
+      <div class="button-group"> <!-- Navigation buttons -->
         <a href="about_us.html"><button class="b-h">Join Us</button></a>
         <a href="resources.html"><button class="b-h">Learn More</button></a>
       </div>
     </div>
   </div>
 
+  <!-- Team Section -->
   <div class="team-section">
     <h2>Meet the Team</h2>
     <div class="card-container">
+      <!-- Team Member Card: Umar -->
       <div class="card">
         <img src="imgs/Umar_Prom.jpeg" alt="President" />
         <div class="card-body">
@@ -46,6 +52,8 @@
           </a>
         </div>
       </div>
+
+      <!-- Team Member Card: Jack -->
       <div class="card">
         <img src="imgs/Jack_Prom.jpeg" alt="President" />
         <div class="card-body">
@@ -59,9 +67,12 @@
     </div>
   </div>
 
+  <!-- About Section Heading -->
   <h1 class="sec-2">About MIA</h1>
 
+  <!-- Informational Cards Section -->
   <div class="card-container">
+    <!-- Card 1: Financial Literacy -->
     <div class="card">
       <img src="imgs/financial_lit.webp" class="card-img-top" alt="Financial Literacy">
       <div class="card-body">
@@ -71,6 +82,7 @@
       </div>
     </div>
 
+    <!-- Card 2: YIS Competition -->
     <div class="card">
       <img src="imgs/YIS.jpg" class="card-img-top" alt="YIS Competition">
       <div class="card-body">
@@ -81,6 +93,7 @@
       </div>
     </div>
 
+    <!-- Card 3: Bread (humorous/relatable metaphor) -->
     <div class="card">
       <img src="imgs/bread.jpg" class="card-img-top" alt="Bread">
       <div class="card-body">
@@ -91,18 +104,21 @@
     </div>
   </div>
 
+  <!-- Footer Section -->
   <footer id="footer" style="background-color: #003366; color: white; padding: 30px 20px; text-align: left;">
     <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: 0 auto;">
-      <!-- First Column (Marlboro Investment Academy) -->
+
+      <!-- Left side: Info and links -->
       <div style="flex: 1; min-width: 250px; margin-bottom: 15px;">
         <div class="left-side-f" style="margin-bottom: 10px;">
           <h3
             style="color: #d4af37; font-family: 'Arial', sans-serif; font-weight: bold; font-size: 20px; letter-spacing: 1px;">
             Marlboro Investment Academy</h3>
-          <p style="font-size: 14px; line-height: 1.5; font-family: 'Verdana', sans-serif;">Empowering students to build
-            financial literacy, investing skills, and leadership for the future.</p>
+          <p style="font-size: 14px; line-height: 1.5; font-family: 'Verdana', sans-serif;">
+            Empowering students to build financial literacy, investing skills, and leadership for the future.</p>
         </div>
-        <!-- Quick Links Section -->
+
+        <!-- Quick Links -->
         <div class="quick-link">
           <h4
             style="color: #d4af37; font-family: 'Arial', sans-serif; font-weight: bold; font-size: 16px; margin-bottom: 10px;">
@@ -118,17 +134,18 @@
         </div>
       </div>
 
-      <!-- Second Column (Contact Info) -->
+      <!-- Right side: Contact info -->
       <div style="flex: 1; min-width: 250px;">
         <h4
           style="color: #d4af37; font-family: 'Arial', sans-serif; font-weight: bold; font-size: 16px; margin-bottom: 10px;">
           Contact Us</h4>
-        <p style="font-size: 14px; font-family: 'Verdana', sans-serif; line-height: 1.5;">Have questions or need more
-          information? Reach out to us via email or follow us on social media for updates.</p>
+        <p style="font-size: 14px; font-family: 'Verdana', sans-serif; line-height: 1.5;">
+          Have questions or need more information? Reach out to us via email or follow us on social media for updates.
+        </p>
       </div>
     </div>
 
-    <!-- Footer Bottom (Copyright/Additional Info) -->
+    <!-- Footer bottom credits -->
     <div
       style="margin-top: 20px; text-align: center; font-size: 12px; color: #cccccc; font-family: 'Arial', sans-serif;">
       <p>&copy; 2025 Marlboro Investment Academy. All Rights Reserved.</p>
@@ -136,7 +153,7 @@
     </div>
   </footer>
 
-
+  <!-- JavaScript file -->
   <script src="script.js"></script>
 </body>
 

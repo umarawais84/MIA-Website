@@ -1,50 +1,66 @@
-/* Additional styles for about_us/events page */
-
-/* Timeline specific styles */
+/* Container for the timeline section */
 .timeline-container {
     padding: 40px 20px;
+    /* Adds spacing around the content */
     background-color: #f9f9f9;
+    /* Light background color */
 }
 
+/* Main timeline element, centered and constrained in width */
 #timeline {
     max-width: 800px;
     margin: 0 auto;
+    /* Center horizontally */
     position: relative;
+    /* Needed for absolute positioning of pseudo-elements */
 }
 
+/* Vertical line down the center of the timeline */
 #timeline::before {
     content: '';
     position: absolute;
     top: 0;
     left: 50%;
+    /* Centered horizontally */
     width: 4px;
     height: 100%;
     background-color: #d4af37;
+    /* Gold line */
     transform: translateX(-50%);
+    /* Adjust to truly center it */
 }
 
+/* Individual timeline event box */
 .timeline-item {
     margin-bottom: 30px;
     position: relative;
     width: 45%;
+    /* Items take up 45% of the container width */
     padding: 15px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
     opacity: 0;
+    /* Start hidden */
     transform: translateY(20px);
+    /* Start slightly moved down */
     transition: opacity 0.5s, transform 0.5s;
+    /* Smooth animation in */
 }
 
+/* Class applied to make items fade/slide in */
 .timeline-item.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
+/* Push odd timeline items to the right */
 .timeline-item:nth-child(odd) {
     margin-left: auto;
 }
 
+/* Horizontal connector for odd timeline items (left side line) */
 .timeline-item:nth-child(odd)::before {
     content: '';
     position: absolute;
@@ -55,6 +71,7 @@
     background-color: #d4af37;
 }
 
+/* Horizontal connector for even timeline items (right side line) */
 .timeline-item:nth-child(even)::before {
     content: '';
     position: absolute;
@@ -65,7 +82,7 @@
     background-color: #d4af37;
 }
 
-/* Flip card styles */
+/* Container for flip-style cards */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -74,14 +91,17 @@
     margin: 40px auto;
 }
 
+/* Individual flip card */
 .flip-card {
     background-color: transparent;
     width: 300px;
     height: 200px;
     perspective: 1000px;
+    /* Adds 3D perspective */
     margin-bottom: 20px;
 }
 
+/* Inner area of the flip card that rotates */
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -89,19 +109,21 @@
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    /* Enables 3D flipping */
 }
 
+/* Flip animation on hover */
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
+/* Shared styles for front and back sides of the card */
 .flip-card-front,
 .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
-    /* Safari */
     backface-visibility: hidden;
     display: flex;
     flex-direction: column;
@@ -111,32 +133,29 @@
     padding: 20px;
 }
 
+/* Front side style */
 .flip-card-front {
     background-color: #003366;
+    /* Navy blue */
     color: white;
 }
 
+/* Back side style */
 .flip-card-back {
     background-color: #d4af37;
+    /* Gold */
     color: #003366;
+    /* Navy text */
     transform: rotateY(180deg);
 }
 
+/* Header styles inside flip cards */
 .flip-card h3,
 .flip-card h4 {
     margin-top: 0;
 }
 
-/* Events calendar styles */
-.js-calendar {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
+/* Header banner for events section */
 .events-header {
     background-color: #f0f0f0;
     padding: 50px 0;
@@ -144,47 +163,29 @@
     margin-bottom: 30px;
 }
 
-.countdown-timer {
-    margin: 20px 0;
-    text-align: center;
-    padding: 15px;
-    background-color: #003366;
-    color: white;
-    border-radius: 8px;
-}
-
-#countdown {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #d4af37;
-}
-
-.sign-up-form {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-}
-
+/* Past events section */
 .past-events {
     padding: 40px 20px;
     text-align: center;
 }
 
-/* Responsive styles */
+/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
     .timeline-item {
         width: 90%;
+        /* Full width on mobile */
         margin-left: auto !important;
         margin-right: auto !important;
     }
 
     .timeline-item::before {
         display: none;
+        /* Hide connector bars */
     }
 
     #timeline::before {
         left: 20px;
+        /* Shift timeline bar to the left */
     }
 
     .card-container {

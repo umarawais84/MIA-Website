@@ -1,98 +1,137 @@
-/* General styles for body and bubbles */
+/* Smooth scrolling for anchor links within the page */
 html {
     scroll-behavior: smooth;
 }
 
+/* Basic body styling */
 body {
     margin: 0;
+    /* Remove default margin */
     font-family: Arial, sans-serif;
+    /* Set default font */
     background-color: #ffffff;
+    /* White background */
     color: #333;
+    /* Dark gray text color */
     overflow-x: hidden;
+    /* Prevent horizontal scrolling */
 }
 
-/* Main Color Schemes */
+/* Color classes for gold, blue, and green */
 .gold {
     color: #d4af37;
-    /* Gold accent color */
+    /* Gold color */
 }
 
 .blue {
     color: #003366;
-    /* Navy Blue */
+    /* Blue color */
 }
 
 .green {
     color: #628e75;
-    /* Green */
+    /* Green color */
 }
 
-/* Navbar - moved above hero section */
+/* Navbar styles */
 .navbar {
     background-color: transparent !important;
+    /* Transparent background */
     position: absolute;
-    /* Important: takes it out of the normal flow */
+    /* Fixed position at the top */
     top: 0;
+    /* Position at the top */
     left: 0;
+    /* Align to the left */
     width: 100%;
+    /* Full width */
     z-index: 1000;
-    /* Makes sure it stays above other content */
+    /* Ensure navbar is above other elements */
     display: flex;
+    /* Use flexbox for alignment */
     justify-content: center;
+    /* Center navbar links */
     padding: 15px 0;
+    /* Vertical padding */
 }
 
-
+/* Navbar link styles */
 .navbar a {
     color: white;
+    /* White text */
     text-decoration: none;
+    /* Remove underline */
     padding: 8px 15px;
+    /* Padding around links */
     margin: 0 10px;
+    /* Spacing between links */
     border-radius: 5px;
+    /* Rounded corners */
     transition: background-color 0.3s;
+    /* Smooth transition for hover effect */
 }
 
+/* Navbar link hover effect */
 .navbar a:hover {
     background-color: rgba(212, 175, 55, 0.2);
+    /* Light gold background on hover */
 }
 
+/* Active navbar link styles */
 .navbar a.active {
     background-color: #d4af37;
+    /* Gold background for active link */
     color: #003366;
+    /* Dark blue text for active link */
     font-weight: bold;
+    /* Make active link bold */
 }
 
-/* Bubbles effect */
+/* Keyframe animation for floating effect */
 @keyframes float {
     0% {
         transform: translateX(0) translateY(0);
+        /* Initial position */
     }
 
     50% {
         transform: translateX(10px) translateY(-10px);
+        /* Midway floating position */
     }
 
     100% {
         transform: translateX(-10px) translateY(10px);
+        /* End floating position */
     }
 }
 
+/* Bubble container styling */
 .bubble-container {
     position: relative;
+    /* Positioning context for bubbles */
     height: 40vh;
+    /* Set height to 40% of the viewport */
     background: linear-gradient(135deg, #003366, #d4af37);
-    /* Navy Blue to Gold Gradient */
+    /* Gradient background */
     overflow: hidden;
+    /* Hide overflow from moving bubbles */
 }
 
+/* General bubble styles */
 .bubble {
     position: absolute;
+    /* Position absolute for movement */
     background: rgba(98, 142, 117, 0.4);
+    /* Semi-transparent green color */
     border-radius: 50%;
+    /* Make bubbles round */
     opacity: 0.6;
+    /* Slight transparency */
     animation: float 6s ease-in-out infinite;
+    /* Apply float animation */
 }
 
+/* Different sizes and animation speeds for each bubble */
 .bubble:nth-child(1) {
     width: 80px;
     height: 80px;
@@ -123,170 +162,255 @@ body {
     animation-duration: 7s;
 }
 
-/* Hero section */
+/* Hero content section styling */
 .hero-content {
     position: absolute;
+    /* Position in the center */
     top: 50%;
+    /* Center vertically */
     left: 50%;
+    /* Center horizontally */
     transform: translate(-50%, -50%);
+    /* Adjust for true centering */
     text-align: center;
+    /* Center text */
     z-index: 1;
+    /* Layering on top of bubbles */
     color: white;
+    /* White text color */
 }
 
+/* Hero content heading styles */
 .hero-content h1 {
     font-size: 3rem;
+    /* Large heading size */
 }
 
 .hero-content h1 .gold {
     color: #d4af37;
+    /* Apply gold color to specific text */
 }
 
+/* Hero content paragraph styles */
 .hero-content p {
     font-size: 1.2rem;
+    /* Medium text size */
     margin: 10px 0;
+    /* Vertical margin for spacing */
 }
 
+/* Button group container */
 .button-group {
     margin-top: 15px;
+    /* Space between buttons and content */
 }
 
+/* Button styles */
 .button-group button {
     padding: 10px 20px;
+    /* Padding for button */
     margin: 0 10px;
+    /* Horizontal spacing between buttons */
     font-size: 1rem;
+    /* Set font size */
     background-color: #628e75;
+    /* Green background */
     color: white;
+    /* White text */
     border: none;
+    /* No border */
     border-radius: 5px;
+    /* Rounded corners */
     cursor: pointer;
+    /* Pointer cursor on hover */
     transition: background-color 0.3s;
+    /* Smooth transition for background color */
 }
 
+/* Button hover effect */
 .button-group button:hover {
     background-color: #9dbf9e;
+    /* Light green background on hover */
 }
 
-/* Team Section */
+/* Team section styling */
 .team-section {
     text-align: center;
+    /* Center text */
     padding: 50px 20px;
+    /* Padding around section */
 }
 
+/* Team section heading */
 .team-section h2 {
     font-size: 3rem;
+    /* Large heading size */
     margin-bottom: 40px;
+    /* Space below heading */
 }
 
+/* Card container styling */
 .card-container {
     display: flex;
+    /* Flexbox layout */
     justify-content: center;
+    /* Center the cards horizontally */
     gap: 30px;
+    /* Space between cards */
     flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
     padding-bottom: 200px;
+    /* Space at the bottom */
 }
 
+/* Individual card styling */
 .card {
     width: 250px;
+    /* Fixed card width */
     background-color: white;
+    /* White background */
     border-radius: 10px;
+    /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
     overflow: hidden;
+    /* Hide any overflow */
     display: flex;
+    /* Use flexbox layout */
     flex-direction: column;
+    /* Stack elements vertically */
     align-items: center;
+    /* Center elements inside the card */
     text-align: center;
+    /* Center text */
     transition: transform 0.3s;
+    /* Smooth transition for hover effect */
 }
 
+/* Hover effect on cards */
 .card:hover {
     transform: translateY(-5px);
+    /* Slight lift effect */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* Deeper shadow on hover */
 }
 
+/* Card image styling */
 .card img {
     width: 100%;
+    /* Full width of the card */
     height: auto;
+    /* Maintain aspect ratio */
 }
 
+/* Card body styling */
 .card-body {
     padding: 20px;
+    /* Padding around the content */
 }
 
+/* Card body heading */
 .card-body h3 {
     font-size: 1.2rem;
+    /* Medium heading size */
     margin: 0 0 10px;
+    /* Spacing between heading and content */
 }
 
+/* Card body paragraph styling */
 .card-body p {
     font-size: 0.95rem;
+    /* Smaller text size */
     color: #333;
+    /* Dark gray text color */
 }
 
+/* Card button styling */
 .card-button {
     margin-top: 10px;
+    /* Space above button */
     padding: 8px 15px;
+    /* Button padding */
     background-color: #d4af37;
+    /* Gold background */
     color: black;
+    /* Black text */
     border: none;
+    /* No border */
     border-radius: 5px;
+    /* Rounded corners */
     cursor: pointer;
+    /* Pointer cursor */
     font-size: 0.9rem;
+    /* Smaller font size */
     text-decoration: none;
+    /* No underline */
     display: inline-block;
+    /* Inline block element */
     transition: background-color 0.3s;
+    /* Smooth background color transition */
 }
 
+/* Hover effect for card button */
 .card-button:hover {
     background-color: #c29e2e;
+    /* Darker gold background on hover */
 }
 
-.footer-a:hover{
+/* Footer link hover effect */
+.footer-a:hover {
     color: #d4af37 !important;
+    /* Change color to gold on hover */
 }
 
+/* Section 2 styling */
 .sec-2 {
     display: flex;
+    /* Use flexbox */
     justify-content: center;
+    /* Center content */
     align-items: center;
+    /* Vertically align items */
     margin-bottom: 40px;
-    /* Remove any default margin */
+    /* Margin below section */
     padding: 0;
-    /* Remove any default padding */
+    /* Remove padding */
 }
 
-
-
-/* Scrollbar width */
+/* Custom scrollbar styling */
 ::-webkit-scrollbar {
     width: 12px;
+    /* Set width of the scrollbar */
 }
 
-/* Track (background) */
+/* Scrollbar track (background) styling */
 ::-webkit-scrollbar-track {
     background: #e6f4ea;
-    /* light mint green for freshness */
+    /* Light green background */
     border-radius: 10px;
+    /* Rounded corners */
 }
 
-/* Thumb (scroll handle) */
+/* Scrollbar thumb (slider) styling */
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(to bottom, #28a745, #218838);
-    /* dollar green gradient */
+    /* Green gradient thumb */
     border-radius: 10px;
+    /* Rounded thumb */
     border: 2px solid #c3e6cb;
-    /* pale green border */
+    /* Light green border */
 }
 
-/* Thumb on hover */
+/* Scrollbar thumb hover effect */
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(to bottom, #1e7e34, #155724);
-    /* darker green */
+    /* Darker green on hover */
 }
 
-/* Firefox support */
+/* Firefox scrollbar styling */
 html {
     scrollbar-color: #28a745 #e6f4ea;
-    /* thumb color, track color */
+    /* Set scrollbar colors for Firefox */
     scrollbar-width: thin;
+    /* Set scrollbar width to thin */
 }
