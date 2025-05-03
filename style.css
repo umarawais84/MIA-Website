@@ -8,6 +8,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
     color: #333;
+    overflow-x: hidden;
 }
 
 /* Main Color Schemes */
@@ -28,12 +29,19 @@ body {
 
 /* Navbar - moved above hero section */
 .navbar {
-    background-color: #003366;
+    background-color: transparent !important;
+    position: absolute;
+    /* Important: takes it out of the normal flow */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Makes sure it stays above other content */
     display: flex;
     justify-content: center;
     padding: 15px 0;
-    width: 100%;
 }
+
 
 .navbar a {
     color: white;
@@ -232,28 +240,53 @@ body {
     background-color: #c29e2e;
 }
 
-/* Footer Links */
-.footer-a {
-    text-decoration: none;
-    color: #f0f0f0;
-    transition: color 0.3;
-}
-
-.footer-a:hover {
-    color: #d4af37;
-}
-
-#footer {
-    margin-top: 100px;
+.footer-a:hover{
+    color: #d4af37 !important;
 }
 
 .sec-2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 35vh;
     margin: 0;
     /* Remove any default margin */
     padding: 0;
     /* Remove any default padding */
+}
+
+
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+    background: #e6f4ea;
+    /* light mint green for freshness */
+    border-radius: 10px;
+}
+
+/* Thumb (scroll handle) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #28a745, #218838);
+    /* dollar green gradient */
+    border-radius: 10px;
+    border: 2px solid #c3e6cb;
+    /* pale green border */
+}
+
+/* Thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #1e7e34, #155724);
+    /* darker green */
+}
+
+/* Firefox support */
+html {
+    scrollbar-color: #28a745 #e6f4ea;
+    /* thumb color, track color */
+    scrollbar-width: thin;
 }
