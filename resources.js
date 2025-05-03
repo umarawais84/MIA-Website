@@ -147,44 +147,4 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('allocation-result').style.display = 'block';
         });
     }
-
-    // E-book form submission
-    const ebookForm = document.getElementById('ebook-form');
-
-    if (ebookForm) {
-        ebookForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Thank you! Your e-book download link has been sent to your email.');
-        });
-    }
-
-    // Modal functionality
-    const modal = document.getElementById('contact-modal');
-    const btn = document.getElementById('contact-modal-button');
-    const span = document.querySelector('.close');
-
-    if (btn && modal && span) {
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function (e) {
-                e.preventDefault();
-                alert('Thanks for your message! We will get back to you soon.');
-                modal.style.display = "none";
-            });
-        }
-    }
 });
