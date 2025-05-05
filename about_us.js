@@ -5,3 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setupFormSubmissions();         // Attaches logic to forms (validation, AJAX, etc.)
     setupScrollAnimations();        // Animates elements when they scroll into view
 });
+
+
+

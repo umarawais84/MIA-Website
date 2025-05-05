@@ -1,6 +1,10 @@
 /* Smooth scrolling for anchor links within the page */
 html {
     scroll-behavior: smooth;
+    scrollbar-color: #28a745 #e6f4ea;
+    /* Set scrollbar colors for Firefox */
+    scrollbar-width: thin;
+    /* Set scrollbar width to thin */
 }
 
 /* Basic body styling */
@@ -407,10 +411,3 @@ body {
     /* Darker green on hover */
 }
 
-/* Firefox scrollbar styling */
-html {
-    scrollbar-color: #28a745 #e6f4ea;
-    /* Set scrollbar colors for Firefox */
-    scrollbar-width: thin;
-    /* Set scrollbar width to thin */
-}
