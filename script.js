@@ -38,11 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initialize calendar, countdown, modal, and form functionality if specific elements are present
     if (document.getElementById('calendar-container')) {
-        initializeCalendar(); // Initialize the calendar
-        initializeCountdownTimer(); // Initialize countdown timer (function not shown)
-        setupModalFunctionality(); // Set up modal behavior
-        setupFormSubmissions(); // Set up form submission behavior
-        setupScrollAnimations(); // Set up scroll-triggered animations
     }
 });
 
